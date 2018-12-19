@@ -1,0 +1,47 @@
+{
+  "name": "libx-node",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon ./src/bin/server.js --exec babel-node",
+    "build": "rm -rf ./dist && babel -d ./dist ./src -s inline",
+    "start": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/niulpanvalkar/LibX-node.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/niulpanvalkar/LibX-node/issues"
+  },
+  "homepage": "https://github.com/niulpanvalkar/LibX-node#readme",
+  "dependencies": {
+    "babel-plugin-module-resolver": "^3.1.1",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "bcrypt": "^3.0.2",
+    "bluebird": "^3.5.3",
+    "body-parser": "^1.18.3",
+    "cors": "^2.8.5",
+    "cron": "^1.6.0",
+    "express": "^4.16.4",
+    "helmet": "^3.15.0",
+    "joi": "^14.3.0",
+    "lodash": "^4.17.11",
+    "moment": "^2.23.0",
+    "morgan": "^1.9.1",
+    "mysql": "^2.16.0",
+    "passport": "^0.4.0",
+    "path": "^0.12.7",
+    "winston": "^3.1.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-stage-2": "^6.24.1",
+    "nodemon": "^1.18.9"
+  }
+}

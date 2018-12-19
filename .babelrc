@@ -1,0 +1,21 @@
+{
+    "presets": [
+    ["env", {
+        "targets" : {
+            "node" : "current"
+        }
+    }]
+    // targets is used to set a specific node version, in our case , we are targeting the current node version.
+    ],
+    "plugins": [
+        "transform-class-properties",
+        ["module-resolver", {
+            "root" : ["./src"],
+            "alias" : {
+                "middlewares" : "./src/middlewares",
+                "config" : "./src/config",
+                "components" : "./src/components"
+            }
+        }]
+    ]
+}

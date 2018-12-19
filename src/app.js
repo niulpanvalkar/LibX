@@ -4,6 +4,8 @@ import helmet from "helmet";
 import bodyParser from "body-parser";
 import userComponents from "./components/userComponents";
 import authRoutes from "./routes/authRoutes";
+import pool from "./config/db";
+
 const app = express();
 
 app.use(cors());

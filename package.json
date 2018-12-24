@@ -34,8 +34,10 @@
     "moment": "^2.23.0",
     "morgan": "^1.9.1",
     "mysql": "^2.16.0",
+    "nconf": "^0.10.0",
     "passport": "^0.4.0",
     "path": "^0.12.7",
+    "uuid": "^3.3.2",
     "winston": "^3.1.0"
   },
   "devDependencies": {

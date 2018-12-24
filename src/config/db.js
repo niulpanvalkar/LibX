@@ -1,13 +1,13 @@
 import nconf from "nconf";
 import path from "path";
 import mysql from "mysql";
+
 nconf.argv().env().file({
     file: path.resolve("config.json")
 });
 
 let connectionObject = {
     host : nconf.get('HOST'),
-    // connectionLimit : nconf.get('CONNECTIONLIMIT'),
     user : nconf.get('USER'),
     password : nconf.get('PASSWORD'),
     database : nconf.get('DATABASE'),

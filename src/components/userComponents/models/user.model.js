@@ -17,7 +17,7 @@ class UserModel {
                       params.email,
                       params.password,
                       params.createdDate,
-                      params.isValid]),
+                      params.isValid],
                       (err, result) => {
                         if (err) {
                             console.log("User registration falied.")
@@ -27,22 +27,13 @@ class UserModel {
                             console.log("User registration successful");
                             resolve(result);
                         }
-                      }
+                      });
             } catch(err) {
-                res
-                .status(responseFormat.statusCode["INTERNAL_SERVER_ERROR"])
-                .send(
-                    responseFormat.getResponseObject(
-                    "success",
-                    responseFormat.statusCode["INTERNAL_SERVER_ERROR"],
-                    "User registration failed",
-                    null
-                ))
-                
+                reject({
+                    message: "Server Error"
+                });
             } 
         })
-        
-        // let queryString = `insert statement`
     };
 }
 

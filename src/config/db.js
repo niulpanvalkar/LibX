@@ -8,7 +8,7 @@ nconf.argv().env().file({
 
 let connectionObject = {
     host : nconf.get('HOST'),
-    user : nconf.get('USER'),
+    user : nconf.get('USER'),   
     password : nconf.get('PASSWORD'),
     database : nconf.get('DATABASE'),
     port : 3306

@@ -14,7 +14,8 @@
             "alias" : {
                 "middlewares" : "./src/middlewares",
                 "config" : "./src/config",
-                "components" : "./src/components"
+                "components" : "./src/components",
+                "utility" : "./src/Utility"
             }
         }]
     ]

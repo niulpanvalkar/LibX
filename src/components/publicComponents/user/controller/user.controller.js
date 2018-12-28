@@ -1,11 +1,9 @@
 import bcrypt from "bcrypt";
-import helper from "../../../Utility/helper";
+import helper from "../../../../Utility/helper";
 import uuidv4 from "uuid/v4";
 import userModel from "../models/user.model";
-import responseFormat from "../../../lib/responseFormat";
-import utilityModel from "../../publicComponents/utility/models/utility.model";
-import jwt from "jsonwebtoken";
-import constants from "../../../config/constants";
+import responseFormat from "../../../../lib/responseFormat";
+import utilityModel from "../../../../Utility/utility.model";
 class UserController {
     constructor() {}
 
@@ -24,7 +22,6 @@ class UserController {
             let passwordHash = await helper.hashPassword(params.password);
             params.password = passwordHash;
             let result = await userModel.userSignUp(params);
-            console.log(result);
             res
             .status(responseFormat.statusCode["SUCCESS"])
             .send(

@@ -1,6 +1,5 @@
 import connnection from "config/db.js";
-import responseFormat from "../../../lib/responseFormat";
-// import { resolve } from "url";
+
 class UserModel {
     constructor () {}
 

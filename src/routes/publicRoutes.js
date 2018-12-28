@@ -1,5 +1,5 @@
 import express from "express";
-import user from "components/userComponents";
+import user from "components/publicComponents/user";
 const router = express.Router();
 
 router.use("/user", user);
